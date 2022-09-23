@@ -33,7 +33,7 @@ for i in range(N+1):
 Пример:
 - [1.1, 1.2, 3.1, 5, 10.01] => 0.19 """
 
-list =[1.1, 1.2, 3.1, 5, 10.01]
+""" list =[1.1, 1.2, 3.1, 5, 10.01]
 max = list[0]%1
 for i in range(len(list)):
     if list[i]%1 > max and list[i]%1!=0:
@@ -44,4 +44,24 @@ for i in range(len(list)):
     if list[i]%1 < min and list[i]%1!=0:
         min = list[i]%1
 print(round(min, 2))
-print(f'разницa между max и min значением дробной части элементов', round(max-min, 2))
+print(f'разницa между max и min значением дробной части элементов', round(max-min, 2)) """
+
+""" Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+Пример:
+- 45 -> 101101
+- 3 -> 11
+- 2 -> 10 """
+
+x = int(input('Введите десятичное число: '))
+list = []
+while x//2!=0:
+    list.append(x % 2)
+    x = x//2
+list.append(x % 2)  
+n = len(list)
+for i in range(n//2):
+    temp = list[i]
+    list[i] = list[n-1-i]
+    list[n-1-i] = temp
+print(*list, sep='')
+
