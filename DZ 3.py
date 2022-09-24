@@ -52,7 +52,7 @@ print(f'разницa между max и min значением дробной ч
 - 3 -> 11
 - 2 -> 10 """
 
-x = int(input('Введите десятичное число: '))
+""" x = int(input('Введите десятичное число: '))
 list = []
 while x//2!=0:
     list.append(x % 2)
@@ -63,5 +63,32 @@ for i in range(n//2):
     temp = list[i]
     list[i] = list[n-1-i]
     list[n-1-i] = temp
-print(*list, sep='')
+print(*list, sep='') """
 
+""" Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+- для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21] """
+
+def fib(n):
+    list1 = [1, 1]
+    for i in range(2, n):
+        a = list1[i-1] + list1[i-2]
+        list1.append(a)
+    return list1
+def negafib(n):
+    list2 = [1, 0]
+    for i in range(2, n+1):
+        b = - list2[0] + list2[1] 
+        list2.insert(0,b)
+    return list2
+k = int(input('Введите десятичное число: '))
+list3 = negafib(k)+fib(k)
+print(list3)
+
+
+
+
+            
+
+           
+
+        
